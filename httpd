@@ -20,4 +20,15 @@ systemctl enable httpd
  
  ls -Zd /var/www/html
  
+semanage fcontext -a -t httpd_sys_content_t /home/wwwroot
+semanage fcontext -a -t httpd_sys_content_t /home/wwwroot/6111
+semanage fcontext -a -t httpd_sys_content_t /home/wwwroot/6222
+semanage fcontext -a -t httpd_sys_content_t /home/wwwroot/6333
+semanage fcontext -a -t httpd_sys_content_t /home/wwwroot/6333/*
+semanage fcontext -a -t httpd_sys_content_t /home/wwwroot/6222/*
+semanage fcontext -a -t httpd_sys_content_t /home/wwwroot/6111/*
+restorecon -Rv /home/wwwroot/
+ semanage port -a -t http_port_t -p tcp 6111
+ semanage port -a -t http_port_t -p tcp 6222
+ semanage port -a -t http_port_t -p tcp 6333
   
