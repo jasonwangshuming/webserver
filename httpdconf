@@ -99,5 +99,10 @@ ServerName tech.test.com
 <Directory /home/wwwroot/6333 >
 AllowOverride None
 Require all granted
+Order allow,deny
+Allow from 10.20.0.0/24
+Allow from 10.40.0.0/24
+Allow from 192.168.10.0/24
+Order allow,deny
 </Directory>
 </VirtualHost>
