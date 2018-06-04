@@ -1,0 +1,103 @@
+Listen 80
+Listen 6111
+Listen 6222
+Listen 6333
+
+<VirtualHost 10.20.0.250>
+DocumentRoot /home/wwwroot/250
+ServerName www.www250.com
+<Directory /home/wwwroot/250 >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.251>
+DocumentRoot /home/wwwroot/251
+ServerName www.www251.com
+<Directory /home/wwwroot/251 >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.252>
+DocumentRoot /home/wwwroot/252
+ServerName www.www252.com
+<Directory /home/wwwroot/252 >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.253 >
+DocumentRoot /home/wwwroot/253
+ServerName www.www253.com
+<Directory /home/wwwroot/253 >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.253 >
+DocumentRoot /home/wwwroot/www
+ServerName www.test.com
+<Directory /home/wwwroot/www >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.253 >
+DocumentRoot /home/wwwroot/mail
+ServerName mail.test.com
+<Directory /home/wwwroot/mail >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.253 >
+DocumentRoot /home/wwwroot/bbs
+ServerName bbs.test.com
+<Directory /home/wwwroot/bbs >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.253 >
+DocumentRoot /home/wwwroot/tech
+ServerName tech.test.com
+<Directory /home/wwwroot/tech >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.253:6111 >
+DocumentRoot /home/wwwroot/6111
+ServerName www.test.com
+<Directory /home/wwwroot/6111 >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.253:6222 >
+DocumentRoot /home/wwwroot/6222
+ServerName tech.test.com
+<Directory /home/wwwroot/6222 >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
+
+<VirtualHost 10.20.0.253:6333 >
+DocumentRoot /home/wwwroot/6333
+ServerName tech.test.com
+<Directory /home/wwwroot/6333 >
+AllowOverride None
+Require all granted
+</Directory>
+</VirtualHost>
