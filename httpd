@@ -1,0 +1,23 @@
+mkdir -p /media/cdrom  
+mount /dev/cdrom /media/cdrom
+
+vim /etc/yum.repos.d/rhel7.repo
+[rhel7]
+name=rhel7
+baseurl=file:///media/cdrom
+enabled=1
+gpgchek=0
+
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+  /var/www/html/           -----web root dir
+  /etc/httpd
+  /etc/httpd/conf/httpd.conf
+  /var/log/httpd/access_log
+  /var/log/httpd/error_log
+ egrep -v '^$|^#' /etc/httpd/conf/httpd.conf
+ 
+ ls -Zd /var/www/html
+ 
+  
